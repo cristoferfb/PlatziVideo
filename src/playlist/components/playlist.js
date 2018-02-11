@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Media from './media.js';
 
 import "./playlist.css";
@@ -15,6 +16,10 @@ function PlayList(props) {
 			}
 		</div>
 	)
+}
+
+PlayList.propTypes = {
+	data: PropTypes.object
 }
 
 export default PlayList;

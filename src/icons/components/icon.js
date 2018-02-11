@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Icon(props){
 	return (
@@ -11,6 +12,12 @@ function Icon(props){
 			{props.children}
 		</svg>
 	)
+}
+
+Icon.propTypes = {
+	fill: PropTypes.number,
+	height: PropTypes.number,
+	width: PropTypes.number
 }
 
 export default Icon
