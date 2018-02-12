@@ -5,12 +5,10 @@ import Media from './media.js';
 import "./playlist.css";
 
 function PlayList(props) {
-	const playlist = props.data.categories[0].playlist
-
 	return (
 		<div className="Playlist">
 			{
-				playlist.map((item)=>{
+				props.playlist.map((item)=>{
 					return <Media {...item} key={item.id} />
 				})
 			}
@@ -19,7 +17,7 @@ function PlayList(props) {
 }
 
 PlayList.propTypes = {
-	data: PropTypes.object
+	playlist: PropTypes.array
 }
 
 export default PlayList;
