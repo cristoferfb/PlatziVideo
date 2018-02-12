@@ -4,19 +4,9 @@ import PropTypes from 'prop-types';
 import './media.css'
 
 class Media extends PureComponent {
-	state = {
-		author: this.props.author
-	}
-
-	handleClick = () => {
-		this.setState({
-			author: 'El pipe se la come'
-		})
-	}
-
 	render () {
 		return (
-			<div className="Media" onClick={this.handleClick}>
+			<div className="Media" onClick={this.props.handleClick}>
 				<div className="Media-cover">
 					<img
 						className="Media-image"
@@ -26,7 +16,7 @@ class Media extends PureComponent {
 						height={160}
 					/>
 					<h3 className="Media-title">{this.props.title}</h3>
-					<p className="Media-author">{this.state.author}</p>
+					<p className="Media-author">{this.prop-types.author}</p>
 				</div>
 			</div>
 		)
