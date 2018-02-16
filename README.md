@@ -1,11 +1,10 @@
-# Platzi Music
+# Platzi Video
 
 > This is the result of my passage through the Platzi's ReactJS course
 
-## Build Setup
-
-````
-# install dependencies
+## Build Setup
+```
+# Install dependencies
 npm i
 
 # serve with hot reaload
