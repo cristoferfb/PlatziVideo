@@ -12,10 +12,13 @@ export default class Home extends Component {
     modalVisible: false
   }
 
-  handleOpenModal = (event) => {
+  handleOpenModal = (media) => {
     this.setState({
-      modalVisible: false
+      modalVisible: true,
+      media
     })
+
+
   }
 
   handleCloseModal = (event) => {
@@ -29,10 +32,6 @@ export default class Home extends Component {
       <HandleError>
         <HomeLayout>
           <Related />
-          <VideoPlayer
-            autoplay
-          />
-
           <Categories 
             categories={this.props.data.categories}
             handleOpenModal={this.handleOpenModal}
@@ -42,7 +41,11 @@ export default class Home extends Component {
             this.state.modalVisible &&
             <ModalContainer>
               <Modal handleClick={this.handleCloseModal}>
-                
+                <VideoPlayer
+                  autoplay
+                  src={this.state.media.src}
+                  title={this.state.media.title}
+                />
               </Modal>
             </ModalContainer>
           }
