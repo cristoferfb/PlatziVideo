@@ -5,8 +5,8 @@ function Icon(props){
 	return (
 		<svg
 			fill={props.color}
-			height={props.height}
-			width={props.width}
+			height={props.size}
+			width={props.size}
 			viewBox="0 0 32 32"
 		>
 			{props.children}
@@ -16,8 +16,7 @@ function Icon(props){
 
 Icon.propTypes = {
 	fill: PropTypes.number,
-	height: PropTypes.number,
-	width: PropTypes.number
+	size: PropTypes.number
 }
 
 export default Icon

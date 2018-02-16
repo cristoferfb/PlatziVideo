@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './media.css'
 
-class Media extends PureComponent {
+export default class Media extends PureComponent {
 	render () {
 		return (
 			<div className="Media" onClick={this.props.handleClick}>
@@ -16,7 +16,7 @@ class Media extends PureComponent {
 						height={160}
 					/>
 					<h3 className="Media-title">{this.props.title}</h3>
-					<p className="Media-author">{this.prop-types.author}</p>
+					<p className="Media-author">{this.props.author}</p>
 				</div>
 			</div>
 		)
@@ -29,5 +29,3 @@ Media.propTypes = {
 	author: PropTypes.string,
 	type: PropTypes.oneOf(['video', 'audio'])
 }
-
-export default Media;
